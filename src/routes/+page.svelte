@@ -52,7 +52,7 @@
 					return {
 						...todo,
 						text: Todotext,
-						dueDate: value.toDate(getLocalTimeZone())
+						dueDate: value!.toDate(getLocalTimeZone())
 					};
 				}
 				return todo;
