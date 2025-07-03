@@ -139,9 +139,15 @@
 	</div>
 	<div class=" my-6 flex flex-col p-24 pl-6">
 		<div class="justify-Start flex">
-			<h1 class="mb-2 flex w-full items-center justify-start text-xl font-semibold">
-				Input Your List
-			</h1>
+			{#if editingTodoId}
+				<h1 class="mb-2 flex w-full items-center justify-start text-xl font-semibold">
+					Edit Your Todo
+				</h1>
+			{:else}
+				<h1 class="mb-2 flex w-full items-center justify-start text-xl font-semibold">
+					Input Your List
+				</h1>
+			{/if}
 		</div>
 		<div class="grid grid-rows-2 md:pr-24">
 			<form onsubmit={saveTodo} class="content">
